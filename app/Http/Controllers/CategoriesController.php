@@ -41,6 +41,7 @@ class CategoriesController extends ApiController
     public function destroy($id)
     {
         $category = Categories::find($id);
+        $category->delete();
         return $this->showOne($category);
     }
 }

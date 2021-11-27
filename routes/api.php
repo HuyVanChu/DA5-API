@@ -16,4 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::resource('quan-tri', 'UsersController');
 Route::resource('danh-muc', 'CategoriesController');
+Route::post('sua-danh-muc/{id}', 'CategoriesController@update');
+
 Route::resource('san-pham', 'ProductsController');
+Route::get('xem-san-pham/{id}', 'ProductsController@show');
+Route::post('sua-san-pham/{id}', 'ProductsController@update');
+Route::post('SaveFile', 'ProductsController@saveFile');
